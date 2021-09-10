@@ -1,0 +1,38 @@
+#include <fstream>
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main()
+{
+    int row=0,count=0;
+    string filename = "test.csv";
+    ifstream myFile;
+    myFile.open(filename);
+    string line;
+    ifstream Stream;
+    Stream.open(filename);
+
+    while (getline(myFile, line))
+    {
+        row++;
+        getline(Stream, line);
+        if ((row%2)!=0)
+        {
+          cout << "\n " << line;
+        }
+
+    }
+
+}
+
+name,course
+A,Java
+B,python
+C,c
+D,node
+E,vue
+F,django
+G,blockchain
+H,c++
+I,.net
